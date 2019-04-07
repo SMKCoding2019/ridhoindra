@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         textViewHighscore = findViewById(R.id.text_view_highscore)
         loadHighscore()
 
+        
+
         val buttonStartQuiz = findViewById<Button>(R.id.button_start_quiz)
         buttonStartQuiz.setOnClickListener { startQuiz() }
     }

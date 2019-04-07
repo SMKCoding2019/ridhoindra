@@ -68,7 +68,7 @@ class QuizActivity : AppCompatActivity() {
                 if (rb1!!.isChecked || rb2!!.isChecked || rb3!!.isChecked) {
                     checkAnswer()
                 } else {
-                    Toast.makeText(this@QuizActivity, "Please select an answer", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@QuizActivity, "Pilih Jawaban", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 showNextQuestion()

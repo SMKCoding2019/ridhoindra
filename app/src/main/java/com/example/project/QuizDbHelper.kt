@@ -60,16 +60,16 @@ class QuizDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, 
         onCreate(db)
     }
 
-    private fun fillQuestionsTable() {
-        val q1 = Question("A is correct", "A", "B", "C", 1)
+    fun fillQuestionsTable() {
+        val q1 = Question("1+1 =", "2", "11", "13", 1)
         addQuestion(q1)
-        val q2 = Question("B is correct", "A", "B", "C", 2)
+        val q2 = Question("2+2 =", "22", "4", "26", 2)
         addQuestion(q2)
-        val q3 = Question("C is correct", "A", "B", "C", 3)
+        val q3 = Question("3+3 =", "33", "9", "6", 3)
         addQuestion(q3)
-        val q4 = Question("A is correct again", "A", "B", "C", 1)
+        val q4 = Question("4+4 =", "8", "1", "16", 1)
         addQuestion(q4)
-        val q5 = Question("B is correct again", "A", "B", "C", 2)
+        val q5 = Question("5+5 =", "25", "10", "5", 2)
         addQuestion(q5)
     }
 

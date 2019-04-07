@@ -91,9 +91,9 @@ class QuizActivity : AppCompatActivity() {
             rb3!!.text = currentQuestion!!.option3
 
             questionCounter++
-            textViewQuestionCount!!.text = "Question: $questionCounter/$questionCountTotal"
+            textViewQuestionCount!!.text = "Pertanyaan: $questionCounter/$questionCountTotal"
             answered = false
-            buttonConfirmNext!!.text = "Confirm"
+            buttonConfirmNext!!.text = "JAWAB"
 
             timeLeftInMillis = COUNTDOWN_IN_MILLIS
             startCountDown()
@@ -142,7 +142,7 @@ class QuizActivity : AppCompatActivity() {
 
         if (answerNr == currentQuestion!!.answerNr) {
             score++
-            textViewScore!!.text = "Score: $score"
+            textViewScore!!.text = "Skor: $score"
         }
 
         showSolution()
@@ -156,22 +156,22 @@ class QuizActivity : AppCompatActivity() {
         when (currentQuestion!!.answerNr) {
             1 -> {
                 rb1!!.setTextColor(Color.GREEN)
-                textViewQuestion!!.text = "Answer 1 is correct"
+                textViewQuestion!!.text = "Jawaban A adalah benar"
             }
             2 -> {
                 rb2!!.setTextColor(Color.GREEN)
-                textViewQuestion!!.text = "Answer 2 is correct"
+                textViewQuestion!!.text = "Jawaban B adalah benar"
             }
             3 -> {
                 rb3!!.setTextColor(Color.GREEN)
-                textViewQuestion!!.text = "Answer 3 is correct"
+                textViewQuestion!!.text = "Jawaban C adalah benar"
             }
         }
 
         if (questionCounter < questionCountTotal) {
-            buttonConfirmNext!!.text = "Next"
+            buttonConfirmNext!!.text = "Selanjutnya"
         } else {
-            buttonConfirmNext!!.text = "Finish"
+            buttonConfirmNext!!.text = "Selesai"
         }
     }
 
@@ -186,7 +186,7 @@ class QuizActivity : AppCompatActivity() {
         if (backPressedTime + 2000 > System.currentTimeMillis()) {
             finishQuiz()
         } else {
-            Toast.makeText(this, "Press back again to finish", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Klik kembali lagi untuk keluar", Toast.LENGTH_SHORT).show()
         }
 
         backPressedTime = System.currentTimeMillis()

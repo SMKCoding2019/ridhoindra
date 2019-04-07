@@ -24,7 +24,9 @@ class MainActivity : AppCompatActivity() {
 
 
         val buttonStartQuiz = findViewById<Button>(R.id.button_start_quiz)
-        buttonStartQuiz.setOnClickListener { startQuiz() }
+        buttonStartQuiz.setOnClickListener {
+            startQuiz()
+            }
     }
 
     private fun startQuiz() {
@@ -48,12 +50,12 @@ class MainActivity : AppCompatActivity() {
     private fun loadHighscore() {
         val prefs = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE)
         highscore = prefs.getInt(KEY_HIGHSCORE, 0)
-        textViewHighscore!!.text = "Highscore: $highscore"
+        textViewHighscore!!.text = "Skor Tertinggi: $highscore"
     }
 
     private fun updateHighscore(highscoreNew: Int) {
         highscore = highscoreNew
-        textViewHighscore!!.text = "Highscore: $highscore"
+        textViewHighscore!!.text = "Skor Tertinggi: $highscore"
 
         val prefs = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE)
         val editor = prefs.edit()

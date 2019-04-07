@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:text="MATH QUIZ"
+            android:text="Kuis Matematika"
             android:textColor="@android:color/black"
             android:textSize="35sp" />
 
@@ -24,7 +24,7 @@
             android:layout_above="@id/button_start_quiz"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="32dp"
-            android:text="Highscore: 0"
+            android:text="Skor Tertinggi: 0"
             android:textStyle="bold"
             android:textSize="25sp" />
 
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="Start Quiz"
+            android:text="Mulai Quiz"
     android:hint="test"/>
 
 </RelativeLayout>

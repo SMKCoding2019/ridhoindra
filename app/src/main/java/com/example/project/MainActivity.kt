@@ -11,14 +11,17 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     private var textViewHighscore: TextView? = null
+    private var textViewScore: TextView? = null
 
     private var highscore: Int = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         textViewHighscore = findViewById(R.id.text_view_highscore)
+        textViewScore = findViewById(R.id.text_view_score)
         loadHighscore()
 
 
@@ -39,7 +42,9 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == REQUEST_CODE_QUIZ) {
             if (resultCode == Activity.RESULT_OK) {
+
                 val score = data!!.getIntExtra(QuizActivity.EXTRA_SCORE, 0)
+                textViewScore!!.text = "Score: $score"
                 if (score > highscore) {
                     updateHighscore(score)
                 }
